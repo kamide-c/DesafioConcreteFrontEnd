@@ -4,7 +4,10 @@ angular.module('starter.services', [])
     function load(pacote, params) {
         params = params || {};
         params.callback = "JSON_CALLBACK"
-        $http.jsonp('http://api.dribbble.com' + pacote , {params: params
+        return $http({
+            method :'JSONP',
+            url:'http://api.dribbble.com' + pacote,
+            params: params
         }).success(function (data, status, headers, config) {
             console.log(data);
         }).error (function (data, status, headers, config) {
