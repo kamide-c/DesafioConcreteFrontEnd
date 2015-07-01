@@ -5,17 +5,20 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['starter.controllers', 'starter.services'])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($routeProvider) {
 
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
-  $stateProvider
+  $routeProvider
 
-  // setup an abstract state for the tabs directive
+  // setup an abstract state for directive
 
   // Each tab has its own nav history stack:
-
+  	.when("/:list", {
+  		controller:"ShotsListCtrl",
+  		templateUrl: "templates/ShotsList.html"
+  	})
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('');
+  	.otherwise({redirectTo: "/ShotsList"})
 
 });
