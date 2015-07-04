@@ -1,1 +1,7 @@
-/* Empty. Add your own CSS if you like */
+.container {
+    margin-top: 70px;
+}
+
+.thumb {
+    margin-bottom: 30px;
+}
