@@ -12,5 +12,9 @@
 }
 
 .foto{
-	width: 50px;
+	width: 42px;
+}
+
+.vert{
+	vertical-align: middle;
 }
