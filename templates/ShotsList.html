@@ -5,6 +5,10 @@
             <div class="col-lg-4 col-md-4 col-xs-4 thumb" ng-repeat="shot in list">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="{{shot.image_400_url}}" alt="">
+                    <div class="caption" id="legenda">
+                    	{{shot.title}}
+                    	<span class="pull-right glyphicon glyphicon-eye-open" aria-hidden="true"> {{shot.views_count}}</span>
+                    </div>
                 </a>
             </div>
 
