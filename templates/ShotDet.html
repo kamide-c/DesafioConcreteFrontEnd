@@ -1,24 +1,32 @@
-<!--
-Create tabs with an icon and label, using the tabs-positive style.
-Each tab's child <ion-nav-view> directive will have its own
-navigation history that also transitions its views in and out.
--->
-<ion-tabs class="tabs-icon-top tabs-positive">
+<div class="container">
 
-  <!-- Dashboard Tab -->
-  <ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/dash">
-    <ion-nav-view name="tab-dash"></ion-nav-view>
-  </ion-tab>
+        <div class="row">
 
-  <!-- Chats Tab -->
-  <ion-tab title="Chats" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/chats">
-    <ion-nav-view name="tab-chats"></ion-nav-view>
-  </ion-tab>
+            <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="{{shot.image_url}}" alt="">
+                    <div class="caption" id="legenda">
+                    	{{shot.title}}
+                    	<span class="pull-right glyphicon glyphicon-eye-open" aria-hidden="true"> {{shot.views_count}}</span>
+                    </div>
+                    <div class="caption">
+                        <ul class="media-list">
+                            <li class="media">
+                              <div class="media-left media-middle">
+                                  <img class="media-object img-circle foto" src="{{shot.player.avatar_url}}">
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">{{shot.player.name}}</h4>
+                              </div>
+                            </li>
+                            <li class="media">
+                                <span ng-bind-html="shot.description"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-  <!-- Account Tab -->
-  <ion-tab title="Account" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">
-    <ion-nav-view name="tab-account"></ion-nav-view>
-  </ion-tab>
+            </div>
 
-
-</ion-tabs>
+        </div>
+</div>

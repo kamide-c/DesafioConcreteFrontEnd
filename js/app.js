@@ -3,7 +3,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['starter.controllers', 'starter.services'])
+angular.module('starter', ['starter.controllers', 'starter.services', 'ngSanitize'])
 
 .config(function($routeProvider) {
 
@@ -18,6 +18,9 @@ angular.module('starter', ['starter.controllers', 'starter.services'])
   		controller:"ShotsListCtrl",
   		templateUrl: "templates/ShotsList.html"
   	})
+    .when("/shots/:id", {
+      controller:"ShotsCtrl",
+      templateUrl: "templates/ShotDet.html"})
   // if none of the above states are matched, use this as the fallback
   	.otherwise({redirectTo: "/ShotsList"})
 

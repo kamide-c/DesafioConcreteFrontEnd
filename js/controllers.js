@@ -6,3 +6,11 @@ angular.module('starter.controllers', [])
 		$scope.list = data.data.shots;
     })
 })
+
+.controller('ShotsCtrl', function($scope, dribbble, $routeParams) {
+    var id = $routeParams.id;
+    dribbble.shot(id).then(function (data){
+        $scope.shot = data.data;
+        console.log(data);
+    });
+});
